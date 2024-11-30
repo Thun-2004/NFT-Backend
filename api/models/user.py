@@ -15,4 +15,4 @@ class User(Base):
     bio: Mapped[str] 
     profile_pic: Mapped[str | None]
     banner: Mapped[str | None]
-    created_at: Mapped[datetime] = mapped_column(default=datetime.now)
+    created_at: Mapped[datetime]
