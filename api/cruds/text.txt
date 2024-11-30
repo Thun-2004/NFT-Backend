@@ -1,0 +1,8 @@
+class Listings(Base): 
+    __tablename__ = "listings"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    nft_id: Mapped[int] //fk
+    token_uri: Mapped[str]
+    status: Mapped[str] //active, sold, cancelled
+    created_at: Mapped[datetime] = mapped_column(default=datetime.now)
