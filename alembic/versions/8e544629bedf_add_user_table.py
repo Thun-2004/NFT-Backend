@@ -27,7 +27,7 @@ def upgrade() -> None:
         Column(
             "id", Integer, primary_key=True, nullable=False, autoincrement=True
         ),
-        Column("wallet_address", String, unique=True, nullable=False),
+        Column("wallet_address", String, nullable=False),
         Column("username", String, unique=True, nullable=False),
         Column("email", String, unique=True, nullable=False),
         Column("hashed_password", String, nullable=False),
