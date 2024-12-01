@@ -66,7 +66,7 @@ async def update_nft_api(
 
 
 @router.post(
-    "/nft/{seller_id}/{nft_id}",
+    "/{seller_id}/{nft_id}",
     description="Buy an NFT and transfer ownership.",
 )
 async def buy_nft_api(
@@ -76,7 +76,6 @@ async def buy_nft_api(
     state: State = Depends(get_state)
 ) -> None:
     return await buy_nft(state, nft_id, seller_id, customer_id)
-
 
 @router.post(
     "/upload_img/{nft_id}",
